@@ -1,0 +1,15 @@
+current directory: /Users/satoshi/study/portfolio/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/satoshi/.rbenv/versions/3.1.2/bin/ruby -I /Users/satoshi/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20220516-11378-45f94z.rb extconf.rb
+creating Makefile
+
+current directory: /Users/satoshi/study/portfolio/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= clean
+
+current directory: /Users/satoshi/study/portfolio/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\=
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/satoshi/study/portfolio/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20220516-11378-1t7fnk/skiptrace/internal
