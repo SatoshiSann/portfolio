@@ -7,4 +7,4 @@ pin "@vue/runtime-core", to: "https://ga.jspm.io/npm:@vue/runtime-core@3.2.33/di
 pin "@vue/runtime-dom", to: "https://ga.jspm.io/npm:@vue/runtime-dom@3.2.33/dist/runtime-dom.esm-bundler.js"
 pin "@vue/shared", to: "https://ga.jspm.io/npm:@vue/shared@3.2.33/dist/shared.esm-bundler.js"
 
-# pin_all_from "app/javascript/controllers", under: "controllers"
+pin_all_from "app/javascript/controllers", under: "controllers"
