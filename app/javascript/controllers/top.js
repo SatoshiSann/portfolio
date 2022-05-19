@@ -1,41 +1,37 @@
 import { createApp } from "vue";
-const targetId = "#cards-list";
-const element = document.querySelector(targetId);
-if (element !== null) {
-  const app = createApp({
-    data() {
-      return {
-        posts: [
-          {
-            imageSrc: "/500x500.png",
-            title: "カードのタイトル",
-            note: "noteがずらずら",
-          },
-          {
-            imageSrc: "/500x500.png",
-            title: "カードのタイトル",
-            note: "noteがずらずら",
-          },
-          {
-            imageSrc: "/500x500.png",
-            title: "カードのタイトル",
-            note: "noteがずらずら",
-          },
-          {
-            imageSrc: "/500x500.png",
-            title: "カードのタイトル",
-            note: "noteがずらずら",
-          },
-          {
-            imageSrc: "/500x500.png",
-            title: "カードのタイトル",
-            note: "noteがずらずら",
-          },
-        ],
-      };
-    },
-    created() {},
-  });
+import axios from "axios";
 
-  const vm = app.mount(targetId);
-}
+createApp({
+  data() {
+    return {
+      posts: [],
+      title: "",
+    };
+  },
+  created() {},
+  mounted() {
+    axios
+      .get("/api/posts")
+      .then((response) => {
+        this.posts = response.data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  },
+  methods: {
+    createNewImage() {
+      axios
+        .post("/api/posts", {
+          title: this.title,
+          note: "",
+        })
+        .then((response) => {
+          this.posts.unshift(response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
+}).mount("#image-genelate-body");

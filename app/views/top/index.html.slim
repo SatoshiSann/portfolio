@@ -4,11 +4,19 @@
 .container
   .row
     .mt-5.mb-5.text-center
-      h1 テスト
-  .row.card-deck#cards-list
-    .col-sm-6.col-md-4.col-lg-3.p-2 v-for="(post, index) in posts"
-      .card
-        img.card-img-top :src="post.imageSrc" 
-        .card-body
-          .card-title= "{{post.title}}"
-          .card-text= "{{post.note}}"
+      h1 ジェネレートランダムimage
+
+  .row#image-genelate-body
+    .row
+      .col-sm-12.offset-md-2.col-md-8.offset-lg-3.col-lg-6
+        .input-group
+          input.form-control v-model="title" placeholder="適当な文字列を入力"
+          button.btn.btn-primary type="button" v-on:click="createNewImage" 画像作成
+
+    .row.card-deck
+      .col-sm-6.col-md-4.col-lg-3.p-2 v-for="(post, index) in posts"
+        .card
+          img.card-img-top :src="post.imageSrc" 
+          .card-body
+            .card-title= "{{post.title}}"
+            .card-text= "{{post.note}}"

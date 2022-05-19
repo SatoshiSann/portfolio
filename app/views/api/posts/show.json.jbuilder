@@ -1,2 +1,2 @@
 json.extract! @post, :title, :note, :url
-json.image_stc url_for(@post.image)
+json.imageSrc url_for(@post.image)
