@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+<!-- Security scan triggered at 2026-10-04 17:12:04 -->
